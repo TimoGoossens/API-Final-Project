@@ -40,5 +40,5 @@ def update_player(db: Session, player_id: int, player: schemas.PlayerCreate):
     db_player.level = player.level
     db_player.password = secure_password
     db.commit()
-    db.refresh(db_user)
-    return db_user
+    db.refresh(db_player)
+    return db_player
