@@ -1,35 +1,23 @@
 from pydantic import BaseModel
 
 
-class ItemBase(BaseModel):
-    title: str
-    description: str | None = None
+class PlayerBase(BaseModel):
+    name: str
+    mmr: int
+    level: int
 
 
-class ItemCreate(ItemBase):
-    pass
+class PlayerCreate(PlayerBase):
+    name: str
+    mmr: int
+    level: int
 
 
-class Item(ItemBase):
+class Player(PlayerBase):
     id: int
-    owner_id: int
-
-    class Config:
-        orm_mode = True
-
-
-class UserBase(BaseModel):
-    email: str
-
-
-class UserCreate(UserBase):
-    password: str
-
-
-class User(UserBase):
-    id: int
-    is_active: bool
-    items: list[Item] = []
+    name: str
+    mmr: int
+    level: int
 
     class Config:
         orm_mode = True

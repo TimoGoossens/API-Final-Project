@@ -1,7 +1,7 @@
 version: "3.9"
 services:
  system-service:
-  image: miverboven/python-db-test
+  image: TimoGoossens/API-Final-Project
   ports:
     - "8000:8000"
   volumes:
