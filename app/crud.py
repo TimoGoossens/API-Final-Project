@@ -25,8 +25,20 @@ def get_players(db: Session, skip: int = 0, limit: int = 100):
 
 
 def create_player(db: Session, player: schemas.PlayerCreate):
-    db_player = models.Player(name=player.name, mmr=player.mmr, level=player.level)
+    db_player = models.Player(name=player.name, mmr=player.mmr, level=player.level, password=player.password)
     db.add(db_player)
     db.commit()
     db.refresh(db_player)
     return db_player
+
+# update data
+def update_player(db: Session, player_id: int, player: schemas.PlayerCreate):
+    secure_password = auth.get_password_hash(player.password)
+    db_player = db.query(models.Player).filter(models.Player.player_id == player_id).first()
+    db_player.name = player.name
+    db_player.mmr = player.mmr
+    db_player.level = player.level
+    db_player.password = secure_password
+    db.commit()
+    db.refresh(db_user)
+    return db_user

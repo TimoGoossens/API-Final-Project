@@ -68,3 +68,11 @@ def read_user(player_id: int, db: Session = Depends(get_db)):
 async def update_player(player: schemas.PlayerCreate, db: Session = Depends(get_db),
                         player_id: int = Path(ge=0, le=60, default=1)):
     return crud.update_player(db=db, player=player, player_id=player_id)
+
+@app.delete("/delete/player/{player_id}", response_model=schemas.Player)
+def delete_player(db: Session, player_id: int):
+    print(player_id)
+    db_user = db.query(models.Player).filter(models.Player.player_id == player_id).first()
+    db.delete(db_user)
+    db.commit()
+    return None
