@@ -32,14 +32,20 @@ def create_player(db: Session, player: schemas.PlayerCreate):
     db.refresh(db_player)
     return db_player
 
-# update data
-def update_player(db: Session, player_id: int, player: schemas.PlayerCreate):
-    secure_password = auth.get_password_hash(player.password)
-    db_player = db.query(models.Player).filter(models.Player.player_id == player_id).first()
-    db_player.name = player.name
-    db_player.mmr = player.mmr
-    db_player.level = player.level
-    db_player.password = secure_password
+def create_user(db: Session, user: schemas.UserCreate):
+    secure_password = auth.get_password_hash(user.password)
+    db_user = models.User(email=user.email, secure_password=secure_password)
+    db.add(db_user)
     db.commit()
-    db.refresh(db_player)
-    return db_player
+    db.refresh(db_user)
+    return db_user
+
+def create_user_item(db: Session, item: schemas.ItemCreate, user_id: int):
+    db_item = models.Item(**item.dict(), owner_id=user_id)
+    db.add(db_item)
+    db.commit()
+    db.refresh(db_item)
+    return db_item
+
+def get_user_by_email(db: Session, email: str):
+    return db.query(models.User).filter(models.User.email == email).first()
