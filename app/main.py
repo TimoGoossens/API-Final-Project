@@ -1,4 +1,4 @@
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, Path, Query
 from starlette.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 import random
@@ -7,6 +7,7 @@ import crud
 import models
 import schemas
 from database import SessionLocal, engine
+
 
 print("We are in the main.......")
 if not os.path.exists('.\sqlitedb'):
