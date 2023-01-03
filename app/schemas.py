@@ -5,7 +5,7 @@ class PlayerBase(BaseModel):
     name: str
     mmr: int
     level: int
-
+    password: str
 
 class PlayerCreate(PlayerBase):
     name: str
