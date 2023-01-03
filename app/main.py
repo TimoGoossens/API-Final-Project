@@ -72,7 +72,7 @@ async def update_player(player: schemas.PlayerCreate, db: Session = Depends(get_
 @app.delete("/delete/player/{player_id}", response_model=schemas.Player)
 def delete_player(db: Session, player_id: int):
     print(player_id)
-    db_user = db.query(models.Player).filter(models.Player.player_id == player_id).first()
-    db.delete(db_user)
+    db_player = db.query(models.Player).filter(models.Player.player_id == player_id).first()
+    db.delete(db_player)
     db.commit()
     return None
