@@ -52,15 +52,11 @@ def get_user_by_email(db: Session, email: str):
 
 def update_player(db: Session, player_id: int, player: schemas.PlayerCreate):
     secure_password = auth.get_password_hash(player.password)
-    db_user = db.query(models.Player).filter(models.Player.player_id == player_id).first()
-    db_user.fav_map_id = player.fav_map_id
-    db_user.username = player.username
-    db_user.name = player.name
-    db_user.email = player.email
-    db_user.region = player.region
-    db_user.mmr = player.mmr
-    db_user.password = secure_password
+    db_player = db.query(models.Player).filter(models.Player.player_id == player_id).first()
+    db_player.name = player.name
+    db_player.mmr = player.mmr
+    db_player.level = player.level
+    db_player.password = secure_password
     db.commit()
-    # print(type(db_user))
-    db.refresh(db_user)
-    return db_user    
+    db.refresh(db_player)
+    return db_player    
