@@ -1,7 +1,7 @@
 version: "3.9"
 services:
  system-service:
-  image: timogoossens/API-Final-Project
+  image: timogoossens/api-final-project
   ports:
     - "8000:8000"
   volumes:
