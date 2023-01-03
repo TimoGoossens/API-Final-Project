@@ -49,3 +49,18 @@ def create_user_item(db: Session, item: schemas.ItemCreate, user_id: int):
 
 def get_user_by_email(db: Session, email: str):
     return db.query(models.User).filter(models.User.email == email).first()
+
+def update_player(db: Session, player_id: int, player: schemas.PlayerCreate):
+    secure_password = auth.get_password_hash(player.password)
+    db_user = db.query(models.Player).filter(models.Player.player_id == player_id).first()
+    db_user.fav_map_id = player.fav_map_id
+    db_user.username = player.username
+    db_user.name = player.name
+    db_user.email = player.email
+    db_user.region = player.region
+    db_user.mmr = player.mmr
+    db_user.password = secure_password
+    db.commit()
+    # print(type(db_user))
+    db.refresh(db_user)
+    return db_user    
