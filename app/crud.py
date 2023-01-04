@@ -26,7 +26,7 @@ def get_players(db: Session, skip: int = 0, limit: int = 100):
 
 
 def create_player(db: Session, player: schemas.PlayerCreate):
-    db_player = models.Player(name=player.name, mmr=player.mmr, level=player.level, password=player.password)
+    db_player = models.Player(name=player.name, mmr=player.mmr, level=player.level)
     db.add(db_player)
     db.commit()
     db.refresh(db_player)
@@ -61,3 +61,8 @@ def update_player(db: Session, player_id: int, player: schemas.PlayerCreate):
     db.refresh(db_player)
     return db_player
 
+def delete_player(db: Session, player_id: int):
+    db_player = db.query(models.Player).filter(models.Player.player_id == player_id).first()
+    db.delete(db_player)
+    db.commit()
+    return None
