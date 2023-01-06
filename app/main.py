@@ -47,6 +47,12 @@ def create_player(player: schemas.PlayerCreate, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail="Name already registered")
     return crud.create_player(db=db, player=player)
 
+@app.post("/users/create/", response_model=schemas.User)
+def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
+    db_user = crud.get_user_by_email(db, email=user.email)
+    if db_user:
+        raise HTTPException(status_code=400, detail="Name already registered")
+    return crud.create_user(db=db, user=user)
 
 @app.get("/players/", response_model=list[schemas.Player])
 def read_players(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
