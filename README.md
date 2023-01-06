@@ -588,7 +588,9 @@ hier maak je een user aan via postman
 >dit is een screenshot van github actions van de repo "api-final-project"
 >![image](https://user-images.githubusercontent.com/91054406/211086840-f36a29d0-4bed-4d94-9a64-2b8a5c6ffa7b.png)
 
-```FROM python:3.10.0-alpine
+
+```
+FROM python:3.10.0-alpine
 WORKDIR /code
 EXPOSE 8000
 COPY ./requirements.txt /code/requirements.txt
