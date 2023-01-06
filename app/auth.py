@@ -21,11 +21,11 @@ def get_password_hash(password):
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
-def authenticate_user(db: Session, email: str, password: str):
-    user = crud.get_user_by_email(db, email)
+def authenticate_user(db: Session, username: str, password: str):
+    user = crud.get_user_by_email(db, username)
     if not user:
         return False
-    if not verify_password(password, email.hashed_password):
+    if not verify_password(password, username.hashed_password):
         return False
     return user
 
