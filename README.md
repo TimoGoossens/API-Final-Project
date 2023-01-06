@@ -468,48 +468,63 @@ class Item(Base):
 >**Get Requests**
 
 >hier zie je ook dat de security werkt
-1. ![image](https://user-images.githubusercontent.com/91054406/211034680-7fddbd64-aaa6-45e4-b67d-f3700b0de94d.png)
+1. 
+>![image](https://user-images.githubusercontent.com/91054406/211034680-7fddbd64-aaa6-45e4-b67d-f3700b0de94d.png)
 
 >en hier zie je dat het met een bearer token wel lukt
-    ![image](https://user-images.githubusercontent.com/91054406/211071528-252168ad-b287-4df6-bc3d-37ebbd708ba1.png)
+![image](https://user-images.githubusercontent.com/91054406/211071528-252168ad-b287-4df6-bc3d-37ebbd708ba1.png)
 
-2. ![image](https://user-images.githubusercontent.com/91054406/211045454-506f6ca9-f628-441e-80ea-d23ba8665762.png)
+2. 
+>![image](https://user-images.githubusercontent.com/91054406/211045454-506f6ca9-f628-441e-80ea-d23ba8665762.png)
   
-    >ik heb ingelogd met test@test.com
-    >![image](https://user-images.githubusercontent.com/91054406/211072662-3a734fb6-3064-4531-be2c-5d45957dbd86.png)
+>ik heb ingelogd met test@test.com
+>![image](https://user-images.githubusercontent.com/91054406/211072662-3a734fb6-3064-4531-be2c-5d45957dbd86.png)
 
-    >hier zie je dat het wel werkt met een bearer token
-    >![image](https://user-images.githubusercontent.com/91054406/211073014-ba65dfc2-edfa-4f0a-949b-ece74af160db.png)
+>hier zie je dat het wel werkt met een bearer token
+>![image](https://user-images.githubusercontent.com/91054406/211073014-ba65dfc2-edfa-4f0a-949b-ece74af160db.png)
 
 
+>hier vraag je alle players op via postman
+3. 
+>![image](https://user-images.githubusercontent.com/91054406/211045088-091914df-b5ae-420a-a3ef-0085c0fd1125.png)
 
-3. ![image](https://user-images.githubusercontent.com/91054406/211045088-091914df-b5ae-420a-a3ef-0085c0fd1125.png)
+>hier vraag je een random pllayer op via postman
+4. 
+>![image](https://user-images.githubusercontent.com/91054406/211045646-19ae77d0-6cd9-4304-ba17-de1c2055f38d.png)
 
-4. ![image](https://user-images.githubusercontent.com/91054406/211045646-19ae77d0-6cd9-4304-ba17-de1c2055f38d.png)
-
-5. ![image](https://user-images.githubusercontent.com/91054406/211045878-cc516228-ba5d-496a-9158-c63c8fe9d78a.png)
+>hier vraag je naar een bepaalde player doormiddel van zijn/haar id via postman
+5. 
+>![image](https://user-images.githubusercontent.com/91054406/211045878-cc516228-ba5d-496a-9158-c63c8fe9d78a.png)
 
 >**POST requests**
 
-1. ![image](https://user-images.githubusercontent.com/91054406/211046404-7c84f48e-884a-4a64-9f70-58fbf9f491f2.png)
-    
-2. ![image](https://user-images.githubusercontent.com/91054406/211074376-b9a10de3-799b-400f-b8b2-c57d4306f7fb.png)
+>hier maak je een player aan via postman
+
+1. 
+>![image](https://user-images.githubusercontent.com/91054406/211046404-7c84f48e-884a-4a64-9f70-58fbf9f491f2.png)
+
+hier maak je een user aan via postman
+2. 
+>![image](https://user-images.githubusercontent.com/91054406/211074376-b9a10de3-799b-400f-b8b2-c57d4306f7fb.png)
 
 >Ik weet niet of dit gaat in postman maar heb dit via openAPI /docs gedaan --> dit is om een bearer token te krijgen voor een user zodat deze acces heeft tot de Gets van users --> ik heb alleen de gets van users op authentication gezet.
-3. ![Schermafbeelding 2023-01-06 185617](https://user-images.githubusercontent.com/91054406/211074636-fe6b4908-1fa2-480e-8677-bfbf52c701dc.png)
-![Schermafbeelding 2023-01-06 185638](https://user-images.githubusercontent.com/91054406/211074651-01a8678b-9571-4ad9-95a6-760ac56513b7.png)
+3. 
+>![Schermafbeelding 2023-01-06 185617](https://user-images.githubusercontent.com/91054406/211074636-fe6b4908-1fa2-480e-8677-bfbf52c701dc.png)
+>![Schermafbeelding 2023-01-06 185638](https://user-images.githubusercontent.com/91054406/211074651-01a8678b-9571-4ad9-95a6-760ac56513b7.png)
 
 
 >**PUT requests**
 
->hier verander ik Tester naar Tester2
-1. ![image](https://user-images.githubusercontent.com/91054406/211050971-6ed84885-0aaa-4bbc-a150-9f2299cd8049.png)
+>hier verander ik Tester naar Tester2 via postman
+1. 
+>![image](https://user-images.githubusercontent.com/91054406/211050971-6ed84885-0aaa-4bbc-a150-9f2299cd8049.png)
 
 
 >**DELETE requests**
 
->hier delete ik Tester2
-1. ![image](https://user-images.githubusercontent.com/91054406/211051292-5993dc15-cae6-4920-90f2-6c3232a35f52.png)
+>hier delete ik Tester2 via postman
+1. 
+>![image](https://user-images.githubusercontent.com/91054406/211051292-5993dc15-cae6-4920-90f2-6c3232a35f52.png)
 
 ### openapi /docs
 
@@ -570,7 +585,25 @@ class Item(Base):
 
 ### github actions en okteto
 
->
+>dit is een screenshot van github actions van de repo "api-final-project"
+>![image](https://user-images.githubusercontent.com/91054406/211086840-f36a29d0-4bed-4d94-9a64-2b8a5c6ffa7b.png)
+
+>dit zijn screenshots van okteto waar je kunt zien dat ik de containers laat runnen via docker-compose op okteto
+>![image](https://user-images.githubusercontent.com/91054406/211087346-2987c74a-d67c-4fe4-b940-fb020220ca4f.png)
+
+```version: "3.9"
+services:
+ system-service:
+  image: timogoossens/api-final-project
+  ports:
+    - "8000:8000"
+  volumes:
+    - sqlite_playeritems_volume:/code/sqlitedb
+
+volumes:
+  sqlite_playeritems_volume:```
+  
+
 
 
 
