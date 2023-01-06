@@ -79,7 +79,7 @@ async def update_player(player: schemas.PlayerCreate, db: Session = Depends(get_
     
 @app.delete("/delete/player/{player_id}", response_model=schemas.Player)
 async def delete_player(player: schemas.PlayerCreate, db: Session = Depends (get_db), player_id: int = Path(ge=0, le=60, default=1)):
-    return crud.delete_player(db=db, player=player, player_id=player_id)
+    return crud.delete_player(db=db, player_id=player_id)
 
 
 
