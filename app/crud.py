@@ -4,6 +4,11 @@ import auth
 import models
 import schemas
 
+def get_user(db: Session, user_id: int):
+    return db.query(models.User).filter(models.User.id == user_id).first()
+
+def get_users(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(models.User).offset(skip).limit(limit).all()
 
 def get_player(db: Session, player_id: int):
     return db.query(models.Player).filter(models.Player.id == player_id).first()
