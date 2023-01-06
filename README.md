@@ -634,16 +634,16 @@ volumes:
 ## Aanvullingen: front-end
 
 ### eerste GET request van de site --> hier laat ik een tabel zien met daarin alle players
->![image](https://user-images.githubusercontent.com/91054406/211094832-045e5d03-4de5-43ef-ae4f-b69c60e2361d.png)
+>![image](https://user-images.githubusercontent.com/91054406/211107453-fa27b908-3751-4380-aa7a-e82614f05e50.png)
 >![image](https://user-images.githubusercontent.com/91054406/211094881-2d5a359d-68c3-4fb4-8cc8-10e742319bd6.png)
 
 ### tweede GET request van de site --> hier laat ik een random players zien als je op de knop drukt
 >![image](https://user-images.githubusercontent.com/91054406/211095253-f50c6307-c129-4735-86f9-2d0bba3bb6c7.png)
 >![image](https://user-images.githubusercontent.com/91054406/211095353-c8d82549-8cfb-4112-963e-bfe1fc8882b2.png)
 
-### derde GET request van de site --> hier laat ik de speler zien die het laatste is aangemaakt
->
->
+### --> hier laat ik de speler zien die het laatste is aangemaakt
+>![image](https://user-images.githubusercontent.com/91054406/211107539-3631c1ac-0cf3-43e4-bf11-d45436802f0c.png)
+
 
 ### eerste POST request van de site --> hier kan je een user aanmaken 
 >![image](https://user-images.githubusercontent.com/91054406/211104157-30ceac37-4b45-4623-b32d-c5ad9c0254b8.png)
