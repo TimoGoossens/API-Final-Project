@@ -612,7 +612,8 @@ uvicorn>=0.15.0,<0.16.0
 sqlalchemy==1.4.42
 passlib[bcrypt,argon2]
 python-jose[cryptography]
-python-multipart```
+python-multipart
+```
 
 >dit zijn screenshots van okteto waar je kunt zien dat ik de containers laat runnen via docker-compose op okteto
 >![image](https://user-images.githubusercontent.com/91054406/211087346-2987c74a-d67c-4fe4-b940-fb020220ca4f.png)
@@ -627,7 +628,8 @@ services:
     - sqlite_playeritems_volume:/code/sqlitedb
 
 volumes:
-  sqlite_playeritems_volume:```
+  sqlite_playeritems_volume:
+  ```
  
 ## Aanvullingen: front-end
 
