@@ -7,7 +7,7 @@
 
 **2.Algemene eisen & documentatie (screenshots + uitleg)**
 
-**3.Eindresultaat**
+**3.Aanvulling front-end**
 
 **4.Slotwoord**
 
@@ -626,14 +626,37 @@ services:
 volumes:
   sqlite_playeritems_volume:```
  
+## Aanvullingen: front-end
 
+### eerste GET request van de site --> hier laat ik een tabel zien met daarin alle players
+>![image](https://user-images.githubusercontent.com/91054406/211094832-045e5d03-4de5-43ef-ae4f-b69c60e2361d.png)
+>![image](https://user-images.githubusercontent.com/91054406/211094881-2d5a359d-68c3-4fb4-8cc8-10e742319bd6.png)
 
+### tweede GET request van de site --> hier laat ik een random players zien als je op de knop drukt
+>![image](https://user-images.githubusercontent.com/91054406/211095253-f50c6307-c129-4735-86f9-2d0bba3bb6c7.png)
+>![image](https://user-images.githubusercontent.com/91054406/211095353-c8d82549-8cfb-4112-963e-bfe1fc8882b2.png)
 
+### derde GET request van de site --> hier laat ik de speler zien die het laatste is aangemaakt
+>
+>
 
+### eerste POST request van de site --> hier kan je een user aanmaken 
+>![image](https://user-images.githubusercontent.com/91054406/211104157-30ceac37-4b45-4623-b32d-c5ad9c0254b8.png)
+>![image](https://user-images.githubusercontent.com/91054406/211104194-d67905e3-16b9-4b33-96c4-60cf72767cfd.png)
 
+### tweede POST request van de site --> hier kan je een player aanmaken
+>![image](https://user-images.githubusercontent.com/91054406/211104590-f8d63989-998e-4890-914c-ddc671c53350.png)
+>![image](https://user-images.githubusercontent.com/91054406/211104639-bb401d2d-42c5-47e0-a04c-3d233d8f60d7.png)
 
+>jammer genoeg kunnen niet alle gets op de site gezet worden zoals bv. de GET request waar we om users vragen deze vereist een inlog en het zou ook niet logisch zijn om dit op een site te plaatsen.
 
-      
+## Slotwoord
+
+> Het was eem heel leuk project ik wil zo van deze dingen vaker doen maar liever niet zo kort voor een examen.
+>voor het eerste jaar dat dit vak recht staat vindt ik het een enorme prestatie van jullie.
+>ik hoop dat het allemaal een beetje duidelijk is en als er iets niet duidelijk is heb je nog altijd de code om na te kijken.
+>Dit is het einde van mijn documentatie!
+
 
 
 
