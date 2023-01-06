@@ -466,25 +466,39 @@ class Item(Base):
 
 ### Postman
 >**Get Requests**
+
 >hier zie je ook dat de security werkt
 1. ![image](https://user-images.githubusercontent.com/91054406/211034680-7fddbd64-aaa6-45e4-b67d-f3700b0de94d.png)
+
 >en hier zie je dat het met een bearer token wel lukt
     ![image](https://user-images.githubusercontent.com/91054406/211071528-252168ad-b287-4df6-bc3d-37ebbd708ba1.png)
 
 2. ![image](https://user-images.githubusercontent.com/91054406/211045454-506f6ca9-f628-441e-80ea-d23ba8665762.png)
+  
+    >ik heb ingelogd met test@test.com
+    >![image](https://user-images.githubusercontent.com/91054406/211072662-3a734fb6-3064-4531-be2c-5d45957dbd86.png)
+
+    >hier zie je dat het wel werkt met een bearer token
+    >![image](https://user-images.githubusercontent.com/91054406/211073014-ba65dfc2-edfa-4f0a-949b-ece74af160db.png)
+
+
 
 3. ![image](https://user-images.githubusercontent.com/91054406/211045088-091914df-b5ae-420a-a3ef-0085c0fd1125.png)
 
 4. ![image](https://user-images.githubusercontent.com/91054406/211045646-19ae77d0-6cd9-4304-ba17-de1c2055f38d.png)
 
 5. ![image](https://user-images.githubusercontent.com/91054406/211045878-cc516228-ba5d-496a-9158-c63c8fe9d78a.png)
+
 >**POST requests**
 
 1. ![image](https://user-images.githubusercontent.com/91054406/211046404-7c84f48e-884a-4a64-9f70-58fbf9f491f2.png)
     
-2. 
+2. ![image](https://user-images.githubusercontent.com/91054406/211074376-b9a10de3-799b-400f-b8b2-c57d4306f7fb.png)
 
-3. 
+>Ik weet niet of dit gaat in postman maar heb dit via openAPI /docs gedaan --> dit is om een bearer token te krijgen voor een user zodat deze acces heeft tot de Gets van users --> ik heb alleen de gets van users op authentication gezet.
+3. ![Schermafbeelding 2023-01-06 185617](https://user-images.githubusercontent.com/91054406/211074636-fe6b4908-1fa2-480e-8677-bfbf52c701dc.png)
+![Schermafbeelding 2023-01-06 185638](https://user-images.githubusercontent.com/91054406/211074651-01a8678b-9571-4ad9-95a6-760ac56513b7.png)
+
 
 >**PUT requests**
 
@@ -499,13 +513,64 @@ class Item(Base):
 
 ### openapi /docs
 
+>screenshot met volledige openapi --> niet ingelogd
+
 ![image](https://user-images.githubusercontent.com/91054406/211052143-2652a450-02dc-4294-899d-5e9286b83a42.png)
 
+>screenshot met volledige openapi --> ingelogd
+
+![image](https://user-images.githubusercontent.com/91054406/211075568-7a49fdfd-28ce-4eb8-9f9e-1dc84b250096.png)
+
+>hier zie je dat ik inlog met test@test.com
+>![image](https://user-images.githubusercontent.com/91054406/211072662-3a734fb6-3064-4531-be2c-5d45957dbd86.png)
+
+>**Post requests**
+
+>request 1 --> hier maak ik een speler aan met mijn naam
+>![image](https://user-images.githubusercontent.com/91054406/211077181-5a93ef72-e38a-4028-8a54-68b3e478fafd.png)
+
+>request 2 --> hier maak ik test@test.com aan
+>![image](https://user-images.githubusercontent.com/91054406/211077378-9789d5ee-65c5-4efd-af38-a20178e050d4.png)
+
+>request 3 --> hier maak ik een bearing token aan voor test@test.com
+> ![Schermafbeelding 2023-01-06 185617](https://user-images.githubusercontent.com/91054406/211074636-fe6b4908-1fa2-480e-8677-bfbf52c701dc.png)
+> ![Schermafbeelding 2023-01-06 185638](https://user-images.githubusercontent.com/91054406/211074651-01a8678b-9571-4ad9-95a6-760ac56513b7.png)
+
+>**GET requests**
+
+>request 1 --> hier vraag ik naar alle players die ik gemaakt heb --> Ik heb mijn volume moeten destroyen omdat mijn OAuth anders niet wilde werken daarom dat ik nu even maar 2 spelers laat zien in deze screenshot
+>![image](https://user-images.githubusercontent.com/91054406/211078194-e2fe012f-9ce5-4982-8425-18b6bd0b561b.png)
+
+>request 2 --> hier vraag ik een random speler uit de lijst van de spelers dit heb ik gedaan met import random (geleerd bij python)
+>![image](https://user-images.githubusercontent.com/91054406/211078646-ed26ea6f-d6cf-4ec2-956e-8434fa171b54.png)
+
+>request 3 --> hier vraag ik via het id van een player een bepaalde player op.
+>![image](https://user-images.githubusercontent.com/91054406/211079084-8c90695d-0077-41c6-adc5-27d165c32e28.png)
+
+>request 4 --> als ik niet ingelogd was dan had ik nu dit niet kunnen opvragen maar hier vraag ik de users die zich hebben toegevoegd.
+>![image](https://user-images.githubusercontent.com/91054406/211079252-726bdb89-9947-485d-b9c8-14f47628ba79.png)
+
+>request 5 --> zoals hierboven kan ik dit niet opvragen als er geen authenticatie is gebeurt --> ik vraag ik de current user op.
+>![image](https://user-images.githubusercontent.com/91054406/211079721-c34a3a33-f6cf-4fa7-894e-b6cf08e35894.png)
+
+>**PUT requests**
+
+>bij deze PUT verander je de player via het ID van de player die je wilt aanpassen --> in de request body vul je in waar je de player in wilt veranderen. 
+>![image](https://user-images.githubusercontent.com/91054406/211080677-16bcb210-6116-47e2-afc6-17f9f3272cb1.png)
+
+>**DELETE requests**
+
+>eerst heb ik even een player aangemaakt die ik kan verwijderen(zie screenshot hieronder)
+>![image](https://user-images.githubusercontent.com/91054406/211081275-58bbc3da-dbc5-4fa6-ac6a-53a59ad3f0bc.png)
+
+>hier is dan de DELETE request --> hiermee delete je een user op basis van zijn/haar id.
+>![image](https://user-images.githubusercontent.com/91054406/211081525-803c36c8-4efd-40cf-b925-4b5a0441efcd.png)
 
 
 
+### github actions en okteto
 
-
+>
 
 
 
