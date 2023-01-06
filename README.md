@@ -588,6 +588,29 @@ hier maak je een user aan via postman
 >dit is een screenshot van github actions van de repo "api-final-project"
 >![image](https://user-images.githubusercontent.com/91054406/211086840-f36a29d0-4bed-4d94-9a64-2b8a5c6ffa7b.png)
 
+```FROM python:3.10.0-alpine
+WORKDIR /code
+EXPOSE 8000
+COPY ./requirements.txt /code/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+COPY ./app /code
+RUN mkdir -p /code/sqlitedb
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]```
+
+>de image van de container wordt opgehaald van dockerhub --> door de github workflow.
+>![image](https://user-images.githubusercontent.com/91054406/211089103-86d40394-6375-4f16-bd62-a2ecda63523c.png)
+
+>hier is ook nog de code van requirements.txt --> als je wil dat iets geinstalleerd word zodat je bepaalde imports kunt gebruiken moet je het hier inzetten ik heb deze geinstalleerd:
+
+
+```fastapi>=0.68.0,<0.69.0
+pydantic>=1.8.0,<2.0.0
+uvicorn>=0.15.0,<0.16.0
+sqlalchemy==1.4.42
+passlib[bcrypt,argon2]
+python-jose[cryptography]
+python-multipart```
+
 >dit zijn screenshots van okteto waar je kunt zien dat ik de containers laat runnen via docker-compose op okteto
 >![image](https://user-images.githubusercontent.com/91054406/211087346-2987c74a-d67c-4fe4-b940-fb020220ca4f.png)
 
@@ -602,7 +625,9 @@ services:
 
 volumes:
   sqlite_playeritems_volume:```
-  
+ 
+
+
 
 
 
