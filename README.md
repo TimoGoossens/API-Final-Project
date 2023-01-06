@@ -597,7 +597,8 @@ COPY ./requirements.txt /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 COPY ./app /code
 RUN mkdir -p /code/sqlitedb
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]```
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+```
 
 >de image van de container wordt opgehaald van dockerhub --> door de github workflow.
 >![image](https://user-images.githubusercontent.com/91054406/211089103-86d40394-6375-4f16-bd62-a2ecda63523c.png)
