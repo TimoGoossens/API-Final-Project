@@ -633,6 +633,9 @@ volumes:
  
 ## Aanvullingen: front-end
 
+>Dit is de Github actions workflow van mijn front-end repo
+>![image](https://user-images.githubusercontent.com/91054406/211108233-4c5ddfb3-bf47-4e84-ab55-c60b6f8bb9ed.png)
+
 ### eerste GET request van de site --> hier laat ik een tabel zien met daarin alle players
 >![image](https://user-images.githubusercontent.com/91054406/211107453-fa27b908-3751-4380-aa7a-e82614f05e50.png)
 >![image](https://user-images.githubusercontent.com/91054406/211094881-2d5a359d-68c3-4fb4-8cc8-10e742319bd6.png)
