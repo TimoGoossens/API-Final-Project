@@ -464,6 +464,51 @@ class Item(Base):
     owner = relationship("User", back_populates="items")
 ```
 
+### Postman
+>**Get Requests**
+>hier zie je ook dat de security werkt
+1. ![image](https://user-images.githubusercontent.com/91054406/211034680-7fddbd64-aaa6-45e4-b67d-f3700b0de94d.png)
+>en hier zie je dat het met een bearer token wel lukt
+    ![image](https://user-images.githubusercontent.com/91054406/211071528-252168ad-b287-4df6-bc3d-37ebbd708ba1.png)
+
+2. ![image](https://user-images.githubusercontent.com/91054406/211045454-506f6ca9-f628-441e-80ea-d23ba8665762.png)
+
+3. ![image](https://user-images.githubusercontent.com/91054406/211045088-091914df-b5ae-420a-a3ef-0085c0fd1125.png)
+
+4. ![image](https://user-images.githubusercontent.com/91054406/211045646-19ae77d0-6cd9-4304-ba17-de1c2055f38d.png)
+
+5. ![image](https://user-images.githubusercontent.com/91054406/211045878-cc516228-ba5d-496a-9158-c63c8fe9d78a.png)
+>**POST requests**
+
+1. ![image](https://user-images.githubusercontent.com/91054406/211046404-7c84f48e-884a-4a64-9f70-58fbf9f491f2.png)
+    
+2. 
+
+3. 
+
+>**PUT requests**
+
+>hier verander ik Tester naar Tester2
+1. ![image](https://user-images.githubusercontent.com/91054406/211050971-6ed84885-0aaa-4bbc-a150-9f2299cd8049.png)
+
+
+>**DELETE requests**
+
+>hier delete ik Tester2
+1. ![image](https://user-images.githubusercontent.com/91054406/211051292-5993dc15-cae6-4920-90f2-6c3232a35f52.png)
+
+### openapi /docs
+
+![image](https://user-images.githubusercontent.com/91054406/211052143-2652a450-02dc-4294-899d-5e9286b83a42.png)
+
+
+
+
+
+
+
+
+
 
       
 
