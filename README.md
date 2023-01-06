@@ -657,9 +657,9 @@ volumes:
 
 ## Slotwoord
 
-> Het was eem heel leuk project ik wil zo van deze dingen vaker doen maar liever niet zo kort voor een examen.
->voor het eerste jaar dat dit vak recht staat vindt ik het een enorme prestatie van jullie.
->ik hoop dat het allemaal een beetje duidelijk is en als er iets niet duidelijk is heb je nog altijd de code om na te kijken.
+> Het was een heel leuk project ik wil zo van deze dingen vaker doen maar liever niet zo kort voor een examen.
+>Voor het eerste jaar dat dit vak recht staat vindt ik het een enorme prestatie van jullie!
+>Ik hoop dat het allemaal een beetje duidelijk is en als er iets niet duidelijk is heb je nog altijd de code om na te kijken.
 >Dit is het einde van mijn documentatie!
 
 
