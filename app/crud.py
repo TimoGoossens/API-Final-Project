@@ -56,7 +56,7 @@ def get_user_by_email(db: Session, email: str):
     return db.query(models.User).filter(models.User.email == email).first()
 
 def update_player(db: Session, player_id: int, player: schemas.PlayerCreate):
-    db_player = db.query(models.Player).filter(models.Player.player_id == player_id).first()
+    db_player = db.query(models.Player).filter(models.Player.id == player_id).first()
     db_player.name = player.name
     db_player.mmr = player.mmr
     db_player.level = player.level
